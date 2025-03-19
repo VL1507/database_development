@@ -1,3 +1,5 @@
+-- database: ./CFSRu2UWtZgsI4FjN7CvlQdG968915GY_example.db
+
 SELECT Value,
     CASE
         WHEN Value > 0 THEN 'positive'
