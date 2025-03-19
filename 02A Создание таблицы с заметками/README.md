@@ -9,11 +9,12 @@
 
 В пустой БД требуется создать таблицу Notes со структурой:
 
-ID: INTEGER;
-Note: TEXT;
-TimeOfCreation: DATETIME;
-ProgressMade: REAL;
-Status: TEXT.
+- ID: INTEGER;
+- Note: TEXT;
+- TimeOfCreation: DATETIME;
+- ProgressMade: REAL;
+- Status: TEXT.
+
 Дополнительно, нужно прописать параметры полей:
 
 - ID - первичный ключ с автоинкрементном;
