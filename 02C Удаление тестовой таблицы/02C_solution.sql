@@ -1,1 +1,1 @@
-
+DROP TABLE TestTable
