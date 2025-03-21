@@ -2,7 +2,7 @@
 SELECT
     CarNumber,
     ParkingNumber
-From
+FROM
     Cars
     JOIN ParkingPlaces
     JOIN CarsParkings ON Cars.ID == CarsParkings.CarID
