@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="253.2px" preserveAspectRatio="none" style="width:392px;height:253px;" version="1.1" viewBox="0 0 392 253" width="392.4px" zoomAndPan="magnify"><defs><filter height="300%" id="f1368xf1c570si" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.4"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.8" dy="4.8" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[2184700d62be027001173015daa5fa0a]
+class Cars--><rect fill="#FEFECE" filter="url(#f1368xf1c570si)" height="69.0938" id="Cars" style="stroke: #A80036; stroke-width: 1.7999999999999998;" width="130.8" x="248.4" y="9.6"/><text fill="#000000" font-family="sans-serif" font-size="14.4" lengthAdjust="spacingAndGlyphs" textLength="33.6" x="297" y="28.9664">Cars</text><line style="stroke: #A80036; stroke-width: 1.7999999999999998;" x1="249.6" x2="378" y1="38.3625" y2="38.3625"/><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="70.8" x="255.6" y="55.415">ID: Integer</text><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="116.4" x="255.6" y="70.7807">CarNumber: Text</text><!--MD5=[0d71cd3400c025e7f1a8a885aa217c14]
+class CarsParkings--><rect fill="#FEFECE" filter="url(#f1368xf1c570si)" height="69.0938" id="CarsParkings" style="stroke: #A80036; stroke-width: 1.7999999999999998;" width="135.6" x="18" y="9.6"/><text fill="#000000" font-family="sans-serif" font-size="14.4" lengthAdjust="spacingAndGlyphs" textLength="98.4" x="36.6" y="28.9664">CarsParkings</text><line style="stroke: #A80036; stroke-width: 1.7999999999999998;" x1="19.2" x2="152.4" y1="38.3625" y2="38.3625"/><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="94.8" x="25.2" y="55.415">CarID: Integer</text><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="121.2" x="25.2" y="70.7807">ParkingID: Integer</text><!--MD5=[e2e4a02ed615e18a21032fd655447a39]
+class ParkingPlaces--><rect fill="#FEFECE" filter="url(#f1368xf1c570si)" height="69.0938" id="ParkingPlaces" style="stroke: #A80036; stroke-width: 1.7999999999999998;" width="157.2" x="7.2" y="171.6"/><text fill="#000000" font-family="sans-serif" font-size="14.4" lengthAdjust="spacingAndGlyphs" textLength="105.6" x="33" y="190.9664">ParkingPlaces</text><line style="stroke: #A80036; stroke-width: 1.7999999999999998;" x1="8.4" x2="163.2" y1="200.3625" y2="200.3625"/><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="70.8" x="14.4" y="217.415">ID: Integer</text><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="142.8" x="14.4" y="232.7807">ParkingNumber: Text</text><!--MD5=[bb5cbd4e5e44818f034806b41e2d0977]
+link CarsParkings to Cars--><path d="M153.8988,44.4 C183.816,44.4 218.7972,44.4 248.4,44.4 " fill="none" id="CarsParkings-Cars" style="stroke: #A80036; stroke-width: 1.2;"/><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="50.4" x="175.8" y="36.0803">CarsID</text><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="8.4" x="163.1621" y="39.7698">*</text><!--MD5=[1be90ed6461c822c36fbdccaa3f23259]
+link CarsParkings to ParkingPlaces--><path d="M85.8,79.4472 C85.8,106.5312 85.8,144.33 85.8,171.4018 " fill="none" id="CarsParkings-ParkingPlaces" style="stroke: #A80036; stroke-width: 1.2;"/><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="72" x="87" y="130.8803">ParkingID</text><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="8.4" x="76.5731" y="102.6648">*</text><!--MD5=[0a6fe63040e3c1fd5c4024a620f71529]
+@startuml
+hide empty members
+hide circle
+skinparam ArrowMessageAlignment left
+scale 1.2
+
+class Cars {
+  ID: Integer
+  CarNumber: Text
+}
+
+class CarsParkings {
+  CarID: Integer
+  ParkingID: Integer
+}
+
+
+class ParkingPlaces {
+  ID: Integer
+  ParkingNumber: Text
+}
+
+CarsParkings "*" - Cars: "CarsID"
+CarsParkings "*" - - ParkingPlaces : "ParkingID"
+@enduml
+
+PlantUML version 1.2019.12(Sun Nov 03 10:24:54 UTC 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
