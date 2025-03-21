@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="253.2px" preserveAspectRatio="none" style="width:422px;height:253px;" version="1.1" viewBox="0 0 422 253" width="422.4px" zoomAndPan="magnify"><defs><filter height="300%" id="f32mkmx9zbyyl" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.4"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.8" dy="4.8" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[f98a7414c67034532063da42abcaf6da]
+class phones--><rect fill="#FEFECE" filter="url(#f32mkmx9zbyyl)" height="69.0938" id="phones" style="stroke: #A80036; stroke-width: 1.7999999999999998;" width="150" x="7.2" y="171.6"/><text fill="#000000" font-family="sans-serif" font-size="14.4" lengthAdjust="spacingAndGlyphs" textLength="56.4" x="54" y="190.9664">phones</text><line style="stroke: #A80036; stroke-width: 1.7999999999999998;" x1="8.4" x2="156" y1="200.3625" y2="200.3625"/><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="96" x="14.4" y="217.415">number: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="135.6" x="14.4" y="232.7807">contact_id: INTEGER</text><!--MD5=[070745aa55c88adf9524eb8072fabba8]
+class contacts--><rect fill="#FEFECE" filter="url(#f32mkmx9zbyyl)" height="69.0938" id="contacts" style="stroke: #A80036; stroke-width: 1.7999999999999998;" width="96" x="280.2" y="171.6"/><text fill="#000000" font-family="sans-serif" font-size="14.4" lengthAdjust="spacingAndGlyphs" textLength="66" x="295.2" y="190.9664">contacts</text><line style="stroke: #A80036; stroke-width: 1.7999999999999998;" x1="281.4" x2="375" y1="200.3625" y2="200.3625"/><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="79.2" x="287.4" y="217.415">id: INTEGER</text><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="81.6" x="287.4" y="232.7807">name: TEXT</text><!--MD5=[b90084bcacc18e454bff8c773e52026f]
+class email--><rect fill="#FEFECE" filter="url(#f32mkmx9zbyyl)" height="69.0938" id="email" style="stroke: #A80036; stroke-width: 1.7999999999999998;" width="150" x="253.2" y="9.6"/><text fill="#000000" font-family="sans-serif" font-size="14.4" lengthAdjust="spacingAndGlyphs" textLength="39.6" x="308.4" y="28.9664">email</text><line style="stroke: #A80036; stroke-width: 1.7999999999999998;" x1="254.4" x2="402" y1="38.3625" y2="38.3625"/><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="99.6" x="260.4" y="55.415">address: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="13.2" lengthAdjust="spacingAndGlyphs" textLength="135.6" x="260.4" y="70.7807">contact_id: INTEGER</text><!--MD5=[1d137c142b6fe9cb7470cdc50b308835]
+link phones to contacts--><path d="M157.3452,206.4 C197.19,206.4 244.974,206.4 279.864,206.4 " fill="none" id="phones-contacts" style="stroke: #A80036; stroke-width: 1.2;"/><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="79.2" x="179.1" y="198.0803">contact_id</text><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="8.4" x="167.0154" y="201.824">*</text><!--MD5=[6e15089292a10622f17d33c886e736c7]
+link email to contacts--><path d="M328.2,79.4472 C328.2,106.5312 328.2,144.33 328.2,171.4018 " fill="none" id="email-contacts" style="stroke: #A80036; stroke-width: 1.2;"/><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="79.2" x="329.4" y="130.8803">contact_id</text><text fill="#000000" font-family="sans-serif" font-size="15.6" lengthAdjust="spacingAndGlyphs" textLength="8.4" x="318.9731" y="102.6648">*</text><!--MD5=[9067d908cb6619161121aaf9a61de15f]
+@startuml
+hide empty members
+hide circle
+skinparam ArrowMessageAlignment left
+scale 1.2
+
+class phones {
+  number: TEXT
+  contact_id: INTEGER
+}
+
+class contacts {
+  id: INTEGER
+  name: TEXT
+}
+
+class email {
+  address: TEXT
+  contact_id: INTEGER
+}
+
+phones "*" - contacts : "contact_id"
+email "*" - - contacts : "contact_id"
+@enduml
+
+PlantUML version 1.2019.12(Sun Nov 03 10:24:54 UTC 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
